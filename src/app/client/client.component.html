@@ -1,0 +1,19 @@
+<div *ngIf="articulos; else nodata">
+  <table border="1">
+    <tr>
+      <td>Código</td>
+      <td>Descripción</td>
+      <td>Precio</td>
+    </tr>
+
+    <tr *ngFor="let art of articulos">
+      <td>{{ art.codigo }}</td>
+      <td>{{ art.descripcion }}</td>
+      <td>{{ art.precio }}</td>
+    </tr>
+  </table>
+</div>
+
+<ng-template #nodata>
+  <p>Esperando datos...</p>
+</ng-template>
